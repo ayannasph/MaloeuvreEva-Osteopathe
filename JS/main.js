@@ -1,19 +1,12 @@
 // ── Menu burger mobile ──────────────────────
-const burger = document.querySelector('.nav__burger');
-const mobileMenu = document.querySelector('.nav__mobile');
+const burger = document.getElementById('burger');
+const mobileMenu = document.getElementById('mobile-menu');
 
 if (burger && mobileMenu) {
 
-  burger.addEventListener('click', () => {
+  burger.onclick = () => {
     mobileMenu.classList.toggle('is-open');
-  });
-
-  // Ferme le menu quand on clique sur un lien
-  mobileMenu.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      mobileMenu.classList.remove('is-open');
-    });
-  });
+  };
 
 }
 
