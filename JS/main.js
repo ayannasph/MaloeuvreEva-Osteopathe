@@ -1,14 +1,16 @@
 // ── Menu burger mobile ──────────────────────
-const burger = document.getElementById('burger');
-const mobileMenu = document.getElementById('mobile-menu');
+document.addEventListener("DOMContentLoaded", () => {
 
-if (burger && mobileMenu) {
+  const burger = document.getElementById('burger');
+  const mobileMenu = document.getElementById('mobile-menu');
 
-  burger.onclick = () => {
+  if (!burger || !mobileMenu) return;
+
+  burger.addEventListener('click', () => {
     mobileMenu.classList.toggle('is-open');
-  };
+  });
 
-}
+});
 
 // ── Animations au scroll (Intersection Observer) ────
 const observerOptions = {
