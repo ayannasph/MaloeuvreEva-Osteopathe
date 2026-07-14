@@ -1,0 +1,25 @@
+  :root {
+    --bleu: #0C2340;
+    --bleu-mid: #1A3A5C;
+    --bleu-lt: #E6EEF6;
+    --bleu-accent: #2C5F8A;
+
+    --blanc: #FFFFFF;
+    --creme: #F8F6F3;
+    --sable: #EDE9E4;
+    --bordure: #DDD8D2;
+
+    --texte: #1A1614;
+    --texte-muted: #6B635C;
+
+    --serif: 'Playfair Display', Georgia, serif;
+    --sans: 'Inter', system-ui, sans-serif;
+
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+    --radius-xl: 32px;
+
+    --max-width: 1160px;
+    --nav-height: 68px;
+  }
