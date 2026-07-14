@@ -126,6 +126,7 @@ ul {
 /* ══════════════════════════════════════════
    NAVIGATION
 ══════════════════════════════════════════ */
+
 .nav {
   position: fixed;
   top: 0;
@@ -145,6 +146,7 @@ ul {
   display: flex;
   align-items: center;
   gap: 1.5rem;
+  position: relative;
 }
 
 .nav__logo {
@@ -169,12 +171,12 @@ ul {
 .nav__links {
   display: flex;
   align-items: center;
-  gap: 1.25rem;   /* réduit pour tenir plus de liens */
+  gap: 1.25rem;
   margin-left: auto;
 }
 
 .nav__links a {
-  font-size: 0.82rem;  /* légèrement réduit pour les liens supplémentaires */
+  font-size: 0.82rem;
   font-weight: 400;
   color: var(--texte-muted);
   letter-spacing: 0.01em;
@@ -206,6 +208,8 @@ ul {
   color: var(--bleu);
 }
 
+
+/* Burger mobile */
 .nav__burger {
   display: none;
   flex-direction: column;
@@ -225,10 +229,15 @@ ul {
   transition: transform 0.25s, opacity 0.25s;
 }
 
-/* menu mobile */
+/* Menu mobile */
 .nav__mobile {
   display: none;
   flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+
   background: var(--blanc);
   border-top: 1px solid var(--bordure);
   padding: 1rem 2rem 1.5rem;
@@ -253,6 +262,29 @@ ul {
 
 .nav__mobile a:hover {
   color: var(--bleu);
+}
+
+
+/* Ajustements mobile */
+@media (max-width: 640px) {
+
+  .nav__inner {
+    padding: 0 1.25rem;
+  }
+
+  .nav__logo {
+    font-size: 1rem;
+  }
+
+  .nav__links,
+  .nav__actions {
+    display: none;
+  }
+
+  .nav__burger {
+    display: flex;
+  }
+
 }
 
 /* ══════════════════════════════════════════
